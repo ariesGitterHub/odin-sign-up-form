@@ -1,9 +1,9 @@
 :root {
 --my-red: #8f4c4c;
---my-orange: #a3731b;
+--my-orange: #9b6656;
 --my-yellow: #FEC073;
 --my-green:  #275b27;
---my-blue:   #242471;
+--my-blue:   #212183;
 --my-purple: #520c52;
 --my-magenta:#941a94;
 --my-pink:   #9a6870;
@@ -13,9 +13,12 @@
 --my-skyblue:#3d9dc3;
 --my-black:  #001A25;
 --my-gray:   #464343;
---my-white:  #FCF8DB;
+--my-white:  #f6f4e1;
 --my-dkgray: #26272d;
 --my-ltgray: #cecaca;
+
+--font1: Georgia, 'Times New Roman', Times, serif;
+--font2: Arial, sans-serif;
 }
 * {
     /* border: 2px dotted red; */
@@ -31,8 +34,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: var(--font1);
     margin: 4rem;
+    padding: 5px;
+        font-family: var(--font2);
+        font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 header {
@@ -50,22 +60,28 @@ header {
 }
 
 header img {
-    width: 125px;
+    width: 10rem;
     padding: 0 20px 0 20px;
 }
 
+header h1 {
+    font-family: var(--font1);
+    font-size: 3rem;
+}
+
 pic-text-form-container {
-        border: 10px double var(--my-red);
+        /* border: 5px double var(--my-orange); */
     display: flex;
     flex-direction: row;
         margin: 20px;
 }
 
 pic-container img {
-    height: 60vh;
+    height: 70vh;
     background: var(--my-black);
     display: flex;
     flex: 2;
+
 }
 
 pic-container p{
@@ -83,16 +99,22 @@ text-and-form-container {
 }
 
 text-container {
-    font-family: Arial, sans-serif;
+
     font-size: 1.2rem;
     
 }
+text-container p {
+    font-variant: normal;
+    font-size: 1.25rem;
 
-lecture-container {
+}
+
+lecture-container  {
     color: var(--my-gold);
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 5px;
-        font-variant: small-caps;
+
+    font-variant: small-caps;
 }
 presenter-container {
     display: flex;
@@ -101,53 +123,127 @@ presenter-container {
     justify-content: start;
 }
 presenter-container img {
-    height: 120px;
+    height: 15vh;
     /* border: 5px double var(--my-red); */
     border-radius: 30px;;
     margin: 5px;
     padding: 10px;
 }
 
+
+
+form-container {
+
+    font-variant: small-caps;
+}
+
 a {
-    color: var(--my-yellow);
+    color: var(--my-white);
+}
+
+p {
+    color: var(--my-white);
+  
+    font-variant: small-caps;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 10px;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "\25CF";
+  padding-right: 5px;
+  
+  color: var(--my-orange);
+
+}
+
+li::marker {
+
 }
 
 hr {
-    border: 1px solid var(--my-yellow);
+    border: 1px solid var(--my-orange);
 }
 
 fieldset {
     width: auto;
-    border: 3px double var(--my-red);
+    border: 3px double var(--my-orange);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: start;
     justify-content: space-around;
-    font-family: Arial, sans-serif;
-    font-variant: small-caps;
-    /* margin: 5px; */
-    padding: 5px 0 8px 0;
-
+    padding: 15px 0 8px 0;
 }
 
-div {
 
-}
-
-label {
-
-
-}
-
-input {
-    width: 30ch;
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    width: 25ch;
     display: flex;
     justify-content: start;
-        background: var(--my-red);
+        background: var(--my-orange);
         color: var(--my-white);
     /* margin-right: 5px; */
+    font-size: 1rem;
+    font-weight: 700;
     padding: 3px;
+}
 
+input[type="radio"], input[type="checkbox"] {
+display: inline-flex;
+display: row;
+flex-wrap: wrap;
+align-items: start;
+justify-content: start;
+padding-left: 3px;   
+
+
+}
+
+input[type="radio"], input[type="checkbox"] {
+accent-color: var(--my-orange);
+}
+
+input:focus {
+    background: var(--my-black);
+    border: 3px solid var(--my-white);
+}
+
+button {
+    height: 2rem;
+    width: 5rem;
+    background: var(--my-gold);
+    border: 2px solid var(--my-black);
+    border-radius: 50px;
+    color: var(--my-black);
+
+        font-size: 1.25rem;
+    font-variant: small-caps;
+    font-weight: 700;
+
+}
+
+div button {
+
+    margin-top: 20px;
+
+}
+
+button:hover {
+    background: var(--my-orange);
+    color: var(--my-white);
+}
+
+button:active {
+transform: scale(.9);
 }
 

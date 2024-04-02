@@ -19,3 +19,9 @@ Step 3: Some tips!
 - [ ] The other variation is the selected input, which should have a blue border and subtle box-shadow. This can be done with the :focus pseudo-class you’ve learned about in an earlier lesson.
 - [ ] Do not worry about making your project look nice on mobile, but DO resize your browser a little bit to make sure that it’s not completely broken at different desktop resolutions.
 - [ ] Checking that the password fields match each other requires javascript. Try to implement this if you feel confident, otherwise just validate each field separately.
+
+## Photograph Attributions
+Both photos are under the [Unsplash License](https://unsplash.com/license).
+
+- Photo by [Matt Benson](https://unsplash.com/photos/a-dimly-lit-room-with-egyptian-writing-on-the-walls-xwSZrOZz3IY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
+- Photo by [Ravi Patel](https://unsplash.com/photos/smiling-woman-VMGAbeeJTKo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
