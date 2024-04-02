@@ -1,21 +1,21 @@
 :root {
---my-red: #8f4c4c;
---my-orange: #9b6656;
+--my-red:    #8f4c4c;
+--my-orange: #F5A44F;
 --my-yellow: #FEC073;
---my-green:  #275b27;
---my-blue:   #212183;
---my-purple: #520c52;
---my-magenta:#941a94;
---my-pink:   #9a6870;
---my-brown:  #76371a;
---my-gold:   #FFE8A5;
---my-cyan:   #0e7f7f;
---my-skyblue:#3d9dc3;
+/* --my-green:  #275b27; */
+/* --my-blue:   #212183; */
+/* --my-purple: #520c52; */
+/* --my-magenta:#941a94; */
+/* --my-pink:   #9a6870; */
+/* --my-brown:  #76371a; */
+/* --my-gold:   #FFE8A5; */
+/* --my-cyan:   #0e7f7f; */
+/* --my-skyblue:#3d9dc3; */
 --my-black:  #001A25;
---my-gray:   #464343;
+/* --my-gray:   #464343; */
 --my-white:  #f6f4e1;
---my-dkgray: #26272d;
---my-ltgray: #cecaca;
+/* --my-dkgray: #26272d; */
+/* --my-ltgray: #cecaca; */
 
 --font1: Georgia, 'Times New Roman', Times, serif;
 --font2: Arial, sans-serif;
@@ -77,7 +77,7 @@ pic-text-form-container {
 }
 
 pic-container img {
-    height: 70vh;
+    width: 80vh;
     background: var(--my-black);
     display: flex;
     flex: 2;
@@ -182,20 +182,22 @@ fieldset {
     flex-wrap: wrap;
     align-items: start;
     justify-content: space-around;
-    padding: 15px 0 8px 0;
+    padding: 5px 0 8px 0;
 }
 
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
     width: 25ch;
     display: flex;
-    justify-content: start;
+    align-items: center;
+    justify-content: center;
         background: var(--my-orange);
-        color: var(--my-white);
+        color: var(--my-black);
     /* margin-right: 5px; */
     font-size: 1rem;
     font-weight: 700;
-    padding: 3px;
+    padding: 5px;
+    text-align: left;
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -216,12 +218,13 @@ accent-color: var(--my-orange);
 input:focus {
     background: var(--my-black);
     border: 3px solid var(--my-white);
+    color: var(--my-white);
 }
 
 button {
     height: 2rem;
     width: 5rem;
-    background: var(--my-gold);
+    background: var(--my-white);
     border: 2px solid var(--my-black);
     border-radius: 50px;
     color: var(--my-black);
@@ -240,10 +243,11 @@ div button {
 
 button:hover {
     background: var(--my-orange);
-    color: var(--my-white);
+    color: var(--my-black);
 }
 
 button:active {
 transform: scale(.9);
+border: 2px dotted var(--my-black)
 }
 
