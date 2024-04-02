@@ -20,7 +20,9 @@ Step 3: Some tips!
 - [ ] Do not worry about making your project look nice on mobile, but DO resize your browser a little bit to make sure that it’s not completely broken at different desktop resolutions.
 - [ ] Checking that the password fields match each other requires javascript. Try to implement this if you feel confident, otherwise just validate each field separately.
 
-## Photograph Attributions
+## Photograph and Art Attributions
+[Miskatonic University Seal: Colorized](https://propnomicon.blogspot.com/2009/09/miskatonic-university-seal-colorized.html) by Propnomicon.
+
 Both photos are under the [Unsplash License](https://unsplash.com/license).
 
 - Photo by [Matt Benson](https://unsplash.com/photos/a-dimly-lit-room-with-egyptian-writing-on-the-walls-xwSZrOZz3IY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
