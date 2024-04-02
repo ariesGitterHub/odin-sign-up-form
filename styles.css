@@ -1,0 +1,153 @@
+:root {
+--my-red: #8f4c4c;
+--my-orange: #a3731b;
+--my-yellow: #FEC073;
+--my-green:  #275b27;
+--my-blue:   #242471;
+--my-purple: #520c52;
+--my-magenta:#941a94;
+--my-pink:   #9a6870;
+--my-brown:  #76371a;
+--my-gold:   #FFE8A5;
+--my-cyan:   #0e7f7f;
+--my-skyblue:#3d9dc3;
+--my-black:  #001A25;
+--my-gray:   #464343;
+--my-white:  #FCF8DB;
+--my-dkgray: #26272d;
+--my-ltgray: #cecaca;
+}
+* {
+    /* border: 2px dotted red; */
+    background: var(--my-black);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 4rem;
+}
+
+header {
+    background: var(--my-black);
+
+    color: var(--my-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-variant: small-caps;
+    font-size: 1rem;
+
+}
+
+header img {
+    width: 125px;
+    padding: 0 20px 0 20px;
+}
+
+pic-text-form-container {
+        border: 10px double var(--my-red);
+    display: flex;
+    flex-direction: row;
+        margin: 20px;
+}
+
+pic-container img {
+    height: 60vh;
+    background: var(--my-black);
+    display: flex;
+    flex: 2;
+}
+
+pic-container p{
+    background: var(--my-black);
+    color: var(--my-white); 
+}
+
+
+text-and-form-container {
+    background: var(--my-black);
+    color: var(--my-white);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+text-container {
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    
+}
+
+lecture-container {
+    color: var(--my-gold);
+    font-size: 2rem;
+    padding: 5px;
+        font-variant: small-caps;
+}
+presenter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+presenter-container img {
+    height: 120px;
+    /* border: 5px double var(--my-red); */
+    border-radius: 30px;;
+    margin: 5px;
+    padding: 10px;
+}
+
+a {
+    color: var(--my-yellow);
+}
+
+hr {
+    border: 1px solid var(--my-yellow);
+}
+
+fieldset {
+    width: auto;
+    border: 3px double var(--my-red);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: space-around;
+    font-family: Arial, sans-serif;
+    font-variant: small-caps;
+    /* margin: 5px; */
+    padding: 5px 0 8px 0;
+
+}
+
+div {
+
+}
+
+label {
+
+
+}
+
+input {
+    width: 30ch;
+    display: flex;
+    justify-content: start;
+        background: var(--my-red);
+        color: var(--my-white);
+    /* margin-right: 5px; */
+    padding: 3px;
+
+}
+
