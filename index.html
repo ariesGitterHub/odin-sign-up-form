@@ -4,34 +4,37 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <title>Document</title>
+        <title>Odin Sign Up Form</title>
     </head>
     <body>
         <header>
             <img src="Miskatonic Colored Logo.png" alt="The college seal of fictional Miskatonic University.">
-            <h1>2024 Miskatonic University Lecture Series</h1>
+            <h1>Miskatonic University</h1>
             <img src="Miskatonic Colored Logo.png" alt="The college seal of fictional Miskatonic University.">
         </header>
         <pic-text-form-container>
             <pic-container>
-                <img src="matt-benson-1.png" alt="Rays of light pour into a dark Egyptian tomb from above.">
+                <a href="https://media.tenor.com/3MuX4AU08SMAAAAC/cthulhu-illithids.gif"><img src="matt-benson-1.png" alt="Rays of light pour into a dark Egyptian tomb from above."></a>
             </pic-container>
             <text-and-form-container>
                 <text-container>
-                    <p>Miskatonic University, together with the <em><a href="https://en.wikipedia.org/wiki/Carcosa">Roccasa Institute</a></em>, and a generous endowment from the <em><a href="https://en.wikipedia.org/wiki/Herbert_West%E2%80%93Reanimator#Characters">Herbert West Memorial Fund</a></em>, is proud to showcase the lecture:</p>
+                    <h2>2024 Miskatonic University Lecture Series</h2>
+                    <hr>
+                    <br>
+                    <p>Miskatonic University, together with the <a href="https://en.wikipedia.org/wiki/Carcosa">Roccasa Institute</a>, and a generous endowment from the <a href="https://en.wikipedia.org/wiki/Herbert_West%E2%80%93Reanimator#Characters">Herbert West Memorial Fund</a>, is proud to present:</p>
                     <br>
                     <lecture-container>
-                        <strong>
-                        <a href="https://media.tenor.com/3MuX4AU08SMAAAAC/cthulhu-illithids.gif">"Beyond the Starry Veil: Insights into Lost Antiquarian Philosophies"</a> </strong>
+                        "Beyond the Starry Veil: Insights into Lost Antiquarian Philosophies"
                     </lecture-container>
                     <br>
                     <details-container>
                         <br>
+                        <p>This lecture will shed light on recently discovered scientific methods and philosophies that had a profound impact on human history and the development of many current technologies.</p>
+                        <br>
                         <ul>
-                        <li>Admission: Free ($0.00)</li>
-                        <li>Time: September 13, 2024 @ 7:00PM (EDT)</li>
-                        <li>Location: <a href="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Flqay9nmlb4q21.jpg">Ashley-Delapore Hall of History Building Auditorium</a></li>
-                        <li>Sadly, this is not a real lecture, it's simply a coding challenge.</li>
+                        <li>Admission to this lecture is FREE ($0.00)</li>
+                        <li>Lecture Date/Time: Friday, September 13, 2024 @ 7:00PM (EDT)</li>
+                        <li>Lecture Location: The <a href="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Flqay9nmlb4q21.jpg">Ashley-Delapore Hall of History Building</a> (Auditorium)</li>
                         </ul>
                     </details-container>
                     <br>
@@ -51,18 +54,18 @@
                         <fieldset>
                             <div>
                                 <label for="fname">*First Name</label>
-                                <input type="text" id="fname" name="user-fname"  required>    
+                                <input type="text" id="fname" name="user-fname" required>    
                             </div>
                             <div>
                                 <label for="lname">*Last Name</label>
-                                <input type="text" id="lname" name="user-lname"  required>
+                                <input type="text" id="lname" name="user-lname" required>
                             </div>
                         </fieldset>        
                         <br>
                         <fieldset>
                             <div>
                                 <label for="email">*Email</label>
-                                <input type="email" id="email" name="user-email"  required>
+                                <input type="email" id="email" name="user-email" required>
                             </div>
                             <div>
                                 <label for="phone">Phone</label>
@@ -80,13 +83,13 @@
                                 <input id="password" name="user-password" type="password" required>
                             </div>
                         </fieldset>
-                        <p>Passwords must have xxx, yyy, xxx...</p> 
+                        <p class="password-check">Note: passwords must have a minimum length of 12 and contain at least one uppercase letter (A-Z), one lowercase, one symbol, and one number.</p> 
                         <br>
                         <fieldset>
                             <legend>*Choose a Lecture Format</legend>
                             <div>
                                 <input type="radio" id="in-person" name="user-format" value="in-person" required/>
-                                <label for="in-person">In Person Attendance</label>  
+                                <label for="in-person">In-Person Attendance</label>  
                             </div>
                             <div>    
                                 <input type="radio" id="online" name="user-format" value="online" required/>
@@ -96,7 +99,8 @@
                         <br>
                         <fieldset>
                             <legend>Subscribe for Email News</legend>
-                            <div>
+                            <div class="checkbox-all">
+                            <div class="checkbox-pair">
                             <div>
                                 <input type="checkbox" id="university-newsletter" name="subscribe-university-newsletter" value="university-newsletter" />
                                 <label for="university-newsletter">Miskatonic University Monthly</label>    
@@ -106,7 +110,7 @@
                                 <label for="lecture-emails">Upcoming Lectures</label>
                             </div>
                             </div>
-                            <div>
+                            <div class="checkbox-pair">
                             <div>
                                 <input type="checkbox" id="hwmf" name="subscribe-hwmf" value="hwmf" />
                                 <label for="hwmf">Herbert West Memorial Fund</label> <br/>    
@@ -114,6 +118,7 @@
                             <div>
                                 <input type="checkbox" id="rocassa-review" name="subscribe-rocassa-review" value="rocassa-review" />
                                 <label for="rocassa-review">The Rocassa Review</label>    
+                            </div>
                             </div>
                             </div>
                         </fieldset>
