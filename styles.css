@@ -85,14 +85,15 @@ body {
     background: var(--my-black);
     display: flex;
         flex-direction: column;
-        /* align-items: center;
-        justify-content: center; */
+        align-items: center;
+        justify-content: center;
     font-family: var(--font2);   
     margin: 0;
     padding: 0;
 }
 
 header {
+    width: 100vw;
     background: var(--my-red);
     color: var(--my-white);
     display: flex;
@@ -111,7 +112,7 @@ header h1 {
     font-family: var(--font1);
     font-size: var(--f-size);
     padding: 0;
-    text-align: left;
+    /* text-align: left; */
 }
 
 pic-text-form-container {
@@ -129,7 +130,7 @@ pic-container img {
 
 text-and-form-container {
     max-width: 750px;
-    min-width: 15vw;
+    min-width: 13vw;
     color: var(--my-white);
     display: flex;
         flex-direction: column;
@@ -192,7 +193,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
-    width: 27ch;
+    width: 25ch;
     background-image: linear-gradient(var(--my-yellow), var(--my-orange)); 
     color: var(--my-black);   
     display: flex;
@@ -214,8 +215,8 @@ input:focus {
 }
 
 button {
-    height: 2.5rem;
-    width: 6rem;
+    height: 3rem;
+    width: 7rem;
     background: var(--my-white);
     border: 2px solid var(--my-white);
     border-radius: 50px;
@@ -366,9 +367,9 @@ presenter-container img {
 
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+/* input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
     width: 27ch;
-}    
+}     */
 
 }
 
@@ -397,9 +398,9 @@ presenter-container img {
     width: calc(var(--seal-prof-img) / 0.75);
 }
 
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+/* input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
     width: 24ch;
-} 
+}  */
 
 .radio-checkbox-all {
     display: flex;
