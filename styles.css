@@ -105,14 +105,14 @@ header {
 
 header img {
     width: var(--seal-prof-img);
-    padding-right: 1rem;
+
 }
 
 header h1 {
     font-family: var(--font1);
     font-size: var(--f-size);
-    padding: 0;
-    /* text-align: left; */
+    padding: 1rem;
+    text-align: center;
 }
 
 pic-text-form-container {
@@ -173,7 +173,7 @@ form-container p {
 /* 3. Form Specific Elements             */
 
 fieldset {
-    border: 4px double var(--my-orange);
+    border: none;
     border-radius: 10px;;
     display: flex;
         flex-direction: row;
@@ -181,26 +181,27 @@ fieldset {
         align-items: start;
         justify-content: space-evenly;
     font-size: calc(var(--f-size) / 3);
-    padding: 5px 0 10px 0;
+    padding: 2px 0 10px 0;
 }
-
-/* div {
-    padding-top: 3px;
-} */
 
 label {
     margin-right: 5px;
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
-    width: 25ch;
+    width: 30ch;
     background-image: linear-gradient(var(--my-yellow), var(--my-orange)); 
+    border: 2px solid var(--my-white);
+    border-radius: 10px;;
     color: var(--my-black);   
     display: flex;
     font-size: calc(var(--f-size) / 3);
     font-weight: 700;
-    padding: 5px;
     text-align: left;
+}
+
+ .fieldset-border {
+    border: 2px solid var(--my-orange);
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -210,7 +211,7 @@ input[type="radio"], input[type="checkbox"] {
 
 input:focus {
     background: var(--my-black);
-    border: 3px solid var(--my-white);
+    border: 3px dotted var(--my-white);
     color: var(--my-white);
 }
 
@@ -321,12 +322,12 @@ a, p, ul {
 }
 
 header img {
-    width: calc(var(--seal-prof-img) / 1.5);
-    padding-right: 1rem;
+    width: calc(var(--seal-prof-img) / 1.75);
+
 }
 
 header h1 {
-    font-size: calc(var(--f-size) / 1.5);
+    font-size: calc(var(--f-size) / 1.75);
 }
 
 pic-text-form-container {
@@ -384,12 +385,11 @@ a, p, ul {
 }
 
 header img {
-    width: calc(var(--seal-prof-img) / 1.75);
-    padding-right: 1rem;
+    width: calc(var(--seal-prof-img) / 2.25);
 }
 
 header h1 {
-    font-size: calc(var(--f-size) / 1.75);
+    font-size: calc(var(--f-size) / 2.25);
 }
 
 
@@ -426,12 +426,11 @@ a, p, ul {
 }
     
 header img {
-    width: calc(var(--seal-prof-img) / 2);
-    padding-right: 1rem;
+    width: calc(var(--seal-prof-img) / 2.85);
 }
 
 header h1 {
-    font-size: calc(var(--f-size) / 2);
+    font-size: calc(var(--f-size) / 2.85);
 }
 
 lecture-container  {
