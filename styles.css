@@ -46,7 +46,7 @@
 
 a, p, ul {
     color: var(--my-white);
-    font-size: calc(var(--f-size) / 2.5);
+    font-size: calc(var(--f-size) / 2.7);
 }
 
 a {
@@ -100,18 +100,17 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 header img {
     width: var(--seal-prof-img);
-
+    padding: .5rem;
 }
 
 header h1 {
     font-family: var(--font1);
     font-size: var(--f-size);
-    padding: 1rem;
     text-align: center;
 }
 
@@ -160,7 +159,7 @@ presenter-container {
 
 presenter-container img {
     width: var(--seal-prof-img);
-    border-radius: 50px;;
+    border-radius: 10px;
     margin: 5px;
     padding-right: 10px;
 }
@@ -174,7 +173,7 @@ form-container p {
 
 fieldset {
     border: none;
-    border-radius: 10px;;
+    border-radius: 10px;
     display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -189,10 +188,10 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
-    width: 30ch;
+    width: 25ch;
     background-image: linear-gradient(var(--my-yellow), var(--my-orange)); 
     border: 2px solid var(--my-white);
-    border-radius: 10px;;
+    border-radius: 10px;
     color: var(--my-black);   
     display: flex;
     font-size: calc(var(--f-size) / 3);
@@ -200,7 +199,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     text-align: left;
 }
 
- .fieldset-border {
+.fieldset-border {
     border: 2px solid var(--my-orange);
 }
 
@@ -220,7 +219,7 @@ button {
     width: 7rem;
     background: var(--my-white);
     border: 2px solid var(--my-white);
-    border-radius: 50px;
+    border-radius: 10px;
     color: var(--my-black);
     font-size: calc(var(--f-size) / 3);
     font-weight: 700;
@@ -265,7 +264,7 @@ border: 2px solid var(--my-white)
   background-color: var(--my-red);
   color: var(--my-white);
   text-align: left;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 10px;
   position: absolute;
   z-index: 1;
@@ -318,16 +317,15 @@ lecture-container img {
 @media (width < 865px) {
 
 a, p, ul {
-    font-size: calc(var(--f-size) / 3);
+    font-size: calc(var(--f-size) / 3.1);
 }
 
 header img {
     width: calc(var(--seal-prof-img) / 1.75);
-
 }
 
 header h1 {
-    font-size: calc(var(--f-size) / 1.75);
+    font-size: calc(var(--f-size) / 1.95);
 }
 
 pic-text-form-container {
@@ -367,7 +365,7 @@ presenter-container {
 
 presenter-container img {
     width: 20rem;
-    border-radius: 50px;;
+    border-radius: 10px;
     margin: 5px;
 
 }
@@ -385,13 +383,12 @@ a, p, ul {
 }
 
 header img {
-    width: calc(var(--seal-prof-img) / 2.25);
+    width: calc(var(--seal-prof-img) / 2.35);
 }
 
 header h1 {
-    font-size: calc(var(--f-size) / 2.25);
+    font-size: calc(var(--f-size) / 2.45);
 }
-
 
 lecture-container  {
     font-size: calc(var(--f-size) / 1.75);
@@ -422,7 +419,7 @@ presenter-container img {
 @media (width < 376px) {
 
 a, p, ul {
-    font-size: calc(var(--f-size) / 4);
+    font-size: calc(var(--f-size) / 4.1);
 }
     
 header img {
