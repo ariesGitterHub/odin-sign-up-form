@@ -30,7 +30,7 @@
 --f-size-sm: 1rem;
 --f-size-md: 1.25rem;
 --f-size-lg: 1.5rem;
---f-size-title: 3rem;
+--f-size-title: 2.5rem;
 }
 
 * {
@@ -101,14 +101,14 @@ header {
 }
 
 header img {
-    width: 9rem;
-    padding: 0 20px 0 20px;
+    width: 8rem;
+    padding-right: 10px;
 }
 
 header h1 {
     font-family: var(--font1);
     font-size: var(--f-size-title);
-    text-align: center;
+    text-align: left;
 }
 
 pic-text-form-container {
@@ -116,11 +116,11 @@ pic-text-form-container {
         flex-direction: row;
         align-items: start;
         justify-content: center;
-    margin: 10px;
 }
 
 pic-container img {
-    width: 30vw;
+    width: 25vw;
+    padding-top: 25px;
 }
 
 text-and-form-container {
@@ -130,14 +130,14 @@ text-and-form-container {
     color: var(--my-white);
     display: flex;
         flex-direction: column;
-    padding: 40px;
+    padding: 25px;
 }
 
 lecture-container  {
     color: var(--my-blue);
+    display: flex;
     font-family: "Rakkas", serif;
     font-size: var(--f-size-title);
-    /* padding: 5px; */
 }
 
 presenter-container {
@@ -177,7 +177,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
-    width: 25ch;
+    width: 27ch;
     background-image: linear-gradient(var(--my-yellow), var(--my-orange)); 
     color: var(--my-black);   
     display: flex;
@@ -248,3 +248,100 @@ border: 2px solid var(--my-white)
 
 /* 4. Misc. and Media Queries                   */
 
+@media (width >= 865px) {
+    
+lecture-container img {
+    visibility: hidden;
+    width: 0;
+}
+}
+
+
+@media (width < 865px) {
+
+p, a, ul {
+    font-size: var(--f-size-sm);
+}
+
+header img {
+    width: 5rem;
+    padding-right: 8px;
+}
+header h1 {
+    font-family: var(--font1);
+    font-size: 1.75rem;
+    text-align: left;
+}
+
+pic-text-form-container {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+pic-container img {
+    visibility: hidden;
+    width: 0;
+}
+
+text-and-form-container {
+    /* max-width: 750px; */
+width: 90vw;
+    padding: 5px;
+}
+
+lecture-container  {
+    font-size: var(--f-size-title);
+}
+
+lecture-container img {
+    width: 22vw;
+    padding-right: 10px;
+}
+
+presenter-container {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+}
+
+presenter-container img {
+    width: 20rem;
+    border-radius: 50px;;
+    margin: 5px;
+
+}
+
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    width: 27ch;
+}    
+
+.checkbox-all {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: start;
+    padding-left: 5px;
+}
+
+}
+
+@media (width < 560px) {
+
+lecture-container  {
+    font-size: var(--f-size-lg);
+}
+   
+lecture-container img {
+    visibility: hidden;
+    width: 0;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+    width: 24ch;
+}  
+
+}
