@@ -16,7 +16,7 @@
 /* 1. Root Variables and Global Elements */
 
 :root {
---my-red:    #7c2f2f;
+--my-red:    #7c2f3d;
 --my-blue:   #93b8e8;
 --my-orange: #f1b347;
 --my-yellow: #e8bd88;
@@ -28,10 +28,14 @@
 --font2: "Roboto", sans-serif;
 --font3: "Rakkas", serif;
 
---f-size-sm: 1rem;
+--seal-prof-img: 12rem;
+
+/* --f-size-sm: 1rem;
 --f-size-md: 1.25rem;
 --f-size-lg: 1.5rem;
---f-size-title: 2.5rem;
+--f-size-title: 2.5rem; */
+
+--f-size: 4rem;
 }
 
 * {
@@ -40,18 +44,17 @@
     box-sizing: border-box;
 }
 
+a, p, ul {
+    color: var(--my-white);
+    font-size: calc(var(--f-size) / 2.5);
+}
+
 a {
     color: var(--my-yellow);
-    font-size: var(--f-size-md);
 }
 
 a:visited {
     color: var(--my-blue);
-}
-
-p {
-    color: var(--my-white);
-    font-size: var(--f-size-md);
 }
 
 hr {
@@ -59,7 +62,6 @@ hr {
 }
 
 ul {
-    font-size: var(--f-size-md);    
     list-style: none;
     margin-left: 0;
     padding-left: 10px;
@@ -72,9 +74,9 @@ li {
 }
 
 li:before {
-  content: "\25CF";
-  padding-right: 15px;
-  color: var(--my-orange);
+    content: "\25CF";
+    padding-right: 15px;
+    color: var(--my-orange);
 }
 
 /* 2. Sections and Section Targeted Elements    */
@@ -101,13 +103,13 @@ header {
 }
 
 header img {
-    width: 8rem;
-    padding-right: 10px;
+    width: var(--seal-prof-img);
+    padding-right: 1rem;
 }
 
 header h1 {
     font-family: var(--font1);
-    font-size: var(--f-size-title);
+    font-size: var(--f-size);
     padding: 0;
     text-align: left;
 }
@@ -131,7 +133,7 @@ text-and-form-container {
     color: var(--my-white);
     display: flex;
         flex-direction: column;
-    padding: 10px;
+    padding: 1rem 0 0 1rem;
 }
 
 text-container {
@@ -145,7 +147,9 @@ lecture-container  {
     color: var(--my-blue);
     display: flex;
     font-family: "Rakkas", serif;
-    font-size: var(--f-size-title);
+    font-size: var(--f-size);
+    line-height: 1.15;
+    padding-bottom: 1rem;
 }
 
 presenter-container {
@@ -154,29 +158,34 @@ presenter-container {
 }
 
 presenter-container img {
-    width: 11rem;
+    width: var(--seal-prof-img);
     border-radius: 50px;;
     margin: 5px;
-    padding-right: 20px;
+    padding-right: 10px;
+}
+
+form-container p {
+    color: var(--my-orange);
+    font-size: calc(var(--f-size) / 3.5);
 }
 
 /* 3. Form Specific Elements             */
 
 fieldset {
-    border: 3px double var(--my-orange);
+    border: 4px double var(--my-orange);
     border-radius: 10px;;
     display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         align-items: start;
         justify-content: space-evenly;
-    font-size: var(--f-size-md);
+    font-size: calc(var(--f-size) / 3);
     padding: 5px 0 10px 0;
 }
 
-div {
+/* div {
     padding-top: 3px;
-}
+} */
 
 label {
     margin-right: 5px;
@@ -187,7 +196,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     background-image: linear-gradient(var(--my-yellow), var(--my-orange)); 
     color: var(--my-black);   
     display: flex;
-    font-size: var(--f-size-md);
+    font-size: calc(var(--f-size) / 3);
     font-weight: 700;
     padding: 5px;
     text-align: left;
@@ -211,7 +220,7 @@ button {
     border: 2px solid var(--my-white);
     border-radius: 50px;
     color: var(--my-black);
-    font-size: var(--f-size-md);
+    font-size: calc(var(--f-size) / 3);
     font-weight: 700;
     margin-top: 20px;
 }
@@ -225,12 +234,6 @@ button {
 .radio-checkbox-pairs {
     display: flex;
         flex-direction: column;
-}
-
-.password-check {
-    color: var(--my-orange);
-    font-size: var(--f-size-sm);
-    padding-top: 3px;
 }
 
 button:hover {
@@ -274,12 +277,12 @@ border: 2px solid var(--my-white)
 .popup .popuptext::after {
   content: "";
   position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: var(--my-red) transparent transparent transparent;
+  /* top: 100%; */
+  /* left: 50%; */
+  /* margin-left: -5px; */
+  /* border-width: 5px; */
+  /* border-style: solid; */
+  /* border-color: var(--my-red) transparent transparent transparent; */
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
@@ -312,16 +315,13 @@ lecture-container img {
 
 @media (width < 865px) {
 
-p, a, ul {
-    font-size: var(--f-size-sm);
+header img {
+    width: calc(var(--seal-prof-img) / 1.5);
+    padding-right: 1rem;
 }
 
-header img {
-    width: 3.5rem;
-    padding-right: 8px;
-}
 header h1 {
-    font-size: var(--f-size-lg);
+    font-size: calc(var(--f-size) / 1.5);
 }
 
 pic-text-form-container {
@@ -343,12 +343,13 @@ width: 90vw;
 }
 
 lecture-container  {
-    font-size: var(--f-size-title);
+    font-size: calc(var(--f-size) / 1.25);
+    align-items: center;
 }
 
 lecture-container img {
     width: 22vw;
-    padding-right: 10px;
+    padding-right: 1rem;
 }
 
 presenter-container {
@@ -365,22 +366,35 @@ presenter-container img {
 
 }
 
-
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
     width: 27ch;
 }    
 
 }
 
-@media (width < 560px) {
+@media (width < 650px) {
+
+header img {
+    width: calc(var(--seal-prof-img) / 1.75);
+    padding-right: 1rem;
+}
+
+header h1 {
+    font-size: calc(var(--f-size) / 1.75);
+}
+
 
 lecture-container  {
-    font-size: var(--f-size-lg);
+    font-size: calc(var(--f-size) / 1.75);
 }
    
 lecture-container img {
     visibility: hidden;
     width: 0;
+}
+
+presenter-container img {
+    width: calc(var(--seal-prof-img) / 0.75);
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
@@ -392,6 +406,23 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     flex-direction: column;
     align-items: space-evenly;
     padding-left: 5px;
+}
+
+}
+
+@media (width < 376px) {
+
+a, p, ul {
+    font-size: calc(var(--f-size) / 4);
+}
+    
+header img {
+    width: calc(var(--seal-prof-img) / 2);
+    padding-right: 1rem;
+}
+
+header h1 {
+    font-size: calc(var(--f-size) / 2);
 }
 
 }
