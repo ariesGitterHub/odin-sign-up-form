@@ -316,6 +316,10 @@ lecture-container img {
 
 @media (width < 865px) {
 
+a, p, ul {
+    font-size: calc(var(--f-size) / 3);
+}
+
 header img {
     width: calc(var(--seal-prof-img) / 1.5);
     padding-right: 1rem;
@@ -375,6 +379,10 @@ presenter-container img {
 
 @media (width < 650px) {
 
+a, p, ul {
+    font-size: calc(var(--f-size) / 3.5);
+}
+
 header img {
     width: calc(var(--seal-prof-img) / 1.75);
     padding-right: 1rem;
@@ -423,6 +431,10 @@ header img {
 }
 
 header h1 {
+    font-size: calc(var(--f-size) / 2);
+}
+
+lecture-container  {
     font-size: calc(var(--f-size) / 2);
 }
 
