@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src="javascript.js"></script>
         <title>Odin Sign Up Form</title>
     </head>
     <body>
@@ -20,37 +21,30 @@
                 <text-container>
                     <h2 class="large">2024 MU Lecture Series</h2>
                     <hr>
-                    <br>
                     <p>Miskatonic University, together with the <a href="https://en.wikipedia.org/wiki/Carcosa">Roccasa Institute</a>, and a generous endowment from the <a href="https://en.wikipedia.org/wiki/Herbert_West%E2%80%93Reanimator#Characters">Herbert West Memorial Fund</a>, is proud to present:</p>
-                    <br>
                     <lecture-container>
                         <img src="matt-benson-1.png" alt="Rays of light pour into a dark Egyptian tomb from above.">
                         "Beyond the Starry Veil: Insights into Lost Antiquarian Philosophies"
                     </lecture-container>
-
                     <details-container>
-                        <br>
-                        <p>This lecture will shed light on recently discovered scientific methods and philosophies that had a profound impact on human history and the development of many current technologies.</p>
-                        <br>
+                        <div class="popup" onclick="myFunction()">CLICK FOR LECTURE INFORMATION.
+                        <span class="popuptext" id="myPopup">This lecture will shed light on recently discovered documentary evidence of hitherto unknown scientific methods and philosophies that had a profound impact on human history and the development of many current technologies.</span>
+                        </div>
                         <ul>
                         <li>Admission to this lecture is FREE ($0.00)</li>
                         <li>Lecture Date/Time: Friday, September 13, 2024 @ 7:00PM (EDT)</li>
                         <li>Lecture Location: The <a href="https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Flqay9nmlb4q21.jpg">Ashley-Delapore Hall of History Building</a> (Auditorium)</li>
                         </ul>
                     </details-container>
-                    <br>
                     <presenter-container>
                         <img src="ravi-patel.jpg" alt="SSSSSSS">
                         <p>Presented by Miskatonic University's own, Professor of History, Archaeology, and Ancient Languages, <strong><a href="https://en.wikipedia.org/wiki/The_King_in_Yellow">Dr. Amber King, PhD</a></strong>.</p>               
                     </presenter-container>
                 </text-container>
-                <br>
-                <hr>
-                <br>
                 <form-container>
+                    <hr>
                     <h2>Registration Required as Attendance is Limited</h2>
                     <p>* Indicates Required Fields</p>
-                    <br>
                     <form action="">
                         <fieldset>
                             <div>
@@ -88,30 +82,34 @@
                         <br>
                         <fieldset>
                             <legend>*Choose a Lecture Format</legend>
-                            <div>
-                                <input type="radio" id="in-person" name="user-format" value="in-person" required/>
-                                <label for="in-person">In-Person Attendance</label>  
+                            <div class="radio-checkbox-all">
+                                <div>
+                                    <input type="radio" id="in-person" name="user-format" value="in-person" required/>
+                                    <label for="in-person">In-Person Attendance</label>  
+                                </div>
+                                <div>    
+                                    <input type="radio" id="online" name="user-format" value="online" required/>
+                                    <label for="online">Online: Via MU-Livestream</label>
+                                </div>
+
                             </div>
-                            <div>    
-                                <input type="radio" id="online" name="user-format" value="online" required/>
-                                <label for="online">Online: Via MU-Livestream</label>
-                            </div>
+
                         </fieldset>
                         <br>
                         <fieldset>
                             <legend>Subscribe for Email News</legend>
-                            <div class="checkbox-all">
-                            <div class="checkbox-pair">
+                            <div class="radio-checkbox-all">
+                            <div class="radio-checkbox-pair">
                             <div>
                                 <input type="checkbox" id="university-newsletter" name="subscribe-university-newsletter" value="university-newsletter" />
-                                <label for="university-newsletter">MU Monthly</label>    
+                                <label for="university-newsletter">MU Monthly Newsletter</label>    
                             </div>
                             <div>
                                 <input type="checkbox" id="lecture-emails" name="subscribe-lecture-emails" value="lecture-emails" />
                                 <label for="lecture-emails">Upcoming Lectures</label>
                             </div>
                             </div>
-                            <div class="checkbox-pair">
+                            <div class="radio-checkbox-pair">
                             <div>
                                 <input type="checkbox" id="hwmf" name="subscribe-hwmf" value="hwmf" />
                                 <label for="hwmf">Herbert West Memorial Fund</label> <br/>    
@@ -126,13 +124,9 @@
                         <div>
                             <button type="submit">Submit</button>
                         </div>
-                        <br>
                         <div>
                             <p>Already have a MU Lecture Series Account? <a href="">Log in.</a> </p>  
-                            <br>
-                            <br>
                             <hr>
-                            <br>
                             <p>Website created by the Mad Muffin Man Design Studio, ©opyright 2024</p>   
                         </div>
                     </form>
