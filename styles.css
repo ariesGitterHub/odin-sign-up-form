@@ -189,7 +189,7 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
-    width: 25ch;
+    width: 22ch;
     background-image: linear-gradient(var(--my-yellow), var(--my-orange)); 
     border: 2px solid var(--my-white);
     border-radius: 10px;
@@ -256,15 +256,16 @@ border: 2px solid var(--my-white)
 }
 
 /* Popup container */
-.popup {
+.pop-up {
   position: relative;
   display: inline-block;
   cursor: pointer;
   color: var(--my-orange);
+    font-size: calc(var(--f-size) / 4);
 }
 
 /* The actual popup (appears on top) */
-.popup .popuptext {
+.pop-up .pop-up-text {
   visibility: hidden;
   width: 320px;
   background-color: var(--my-red);
@@ -277,11 +278,11 @@ border: 2px solid var(--my-white)
   bottom: 125%;
   left: 50%;
   margin-left: -80px;
-  font-size: var(--f-size-md);
+  font-size: calc(var(--f-size) / 3.5);
 }
 
 /* Popup arrow */
-.popup .popuptext::after {
+.pop-up .pop-up-text::after {
   content: "";
   position: absolute;
   /* top: 100%; */
@@ -293,7 +294,7 @@ border: 2px solid var(--my-white)
 }
 
 /* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
+.pop-up .pop-up-show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s
@@ -346,8 +347,7 @@ pic-container img {
 }
 
 text-and-form-container {
-    /* max-width: 750px; */
-width: 90vw;
+    width: 90vw;
     padding: 5px;
 }
 
@@ -369,7 +369,7 @@ presenter-container {
 }
 
 presenter-container img {
-    width: 20rem;
+    width: calc(var(--seal-prof-img) * 1.5);
     border-radius: 10px;
     margin: 5px;
 }
@@ -419,7 +419,7 @@ presenter-container img {
 @media (width < 376px) {
 
 a, p, ul {
-    font-size: calc(var(--f-size) / 4.1);
+    font-size: calc(var(--f-size) / 4);
 }
     
 header img {
@@ -432,6 +432,11 @@ header h1 {
 
 lecture-container  {
     font-size: calc(var(--f-size) / 2);
+}
+
+fieldset {
+    font-size: calc(var(--f-size) / 4);
+    padding: 2px 0 5px 0;
 }
 
 }
