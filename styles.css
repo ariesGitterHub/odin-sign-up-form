@@ -172,6 +172,17 @@ form-container p {
 
 /* 3. Form Specific Elements             */
 
+faux-fieldset {
+    border: none;
+    border-radius: 10px;
+    display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: space-evenly;
+    font-size: calc(var(--f-size) / 3);
+}
+
 fieldset {
     border: none;
     border-radius: 10px;
@@ -181,11 +192,6 @@ fieldset {
         align-items: start;
         justify-content: space-evenly;
     font-size: calc(var(--f-size) / 3);
-    padding: 2px 0 10px 0;
-}
-
-label {
-    margin-right: 5px;
 }
 
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
@@ -201,12 +207,21 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 }
 
 .fieldset-border {
-    border: 2px solid var(--my-orange);
+    border: 2px solid var(--my-white);
 }
 
 input[type="radio"], input[type="checkbox"] {
     accent-color: var(--my-orange);    
     display: inline-flex;
+    margin-left: 1rem;
+}
+
+input:invalid {
+    border: 5px double var(--my-red);
+}
+
+fieldset:invalid {
+    border: 5px double var(--my-red);
 }
 
 input:focus {
@@ -244,28 +259,28 @@ button:hover {
 }
 
 button:active {
-transform: scale(.9);
-border: 2px solid var(--my-white)
+    transform: scale(.9);
+    border: 2px solid var(--my-white)
 }
 
 /* 4. Misc. and Media Queries                   */
 
 .madMuffinMan {
     font-family: var(--font3);
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
-/* Popup container */
-.pop-up {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  color: var(--my-orange);
+/* Popup */
+.ld-click {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--my-orange);
     font-size: calc(var(--f-size) / 4);
 }
 
 /* The actual popup (appears on top) */
-.pop-up .pop-up-text {
+.ld-click .ld-pop-up-text, #wp-pop-up-text {
   visibility: hidden;
   width: 320px;
   background-color: var(--my-red);
@@ -281,23 +296,23 @@ border: 2px solid var(--my-white)
   font-size: calc(var(--f-size) / 3.5);
 }
 
-/* Popup arrow */
-.pop-up .pop-up-text::after {
+/* Tint little popup arrow */
+.ld-click .ld-pop-up-text::after, #wp-pop-up-text::after {
   content: "";
   position: absolute;
-  /* top: 100%; */
-  /* left: 50%; */
-  /* margin-left: -5px; */
-  /* border-width: 5px; */
-  /* border-style: solid; */
-  /* border-color: var(--my-red) transparent transparent transparent; */
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--my-red) transparent transparent transparent;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.pop-up .pop-up-show {
+/* Toggles the pop-up-show class when clicking on the popup container */
+.ld-click .pop-up-show, #wp-pop-up-text .pop-up-show {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s
+  animation: fadeIn 1s;
 }
 
 /* Add animation (fade in the popup) */
@@ -316,6 +331,10 @@ border: 2px solid var(--my-white)
 lecture-container img {
     visibility: hidden;
     width: 0;
+}
+
+div input[type="text"], div input[type="email"], div input[type="tel"], div input[type="password"] {
+    margin-bottom: -20px;
 }
 
 }
@@ -374,6 +393,10 @@ presenter-container img {
     margin: 5px;
 }
 
+div input[type="text"], div input[type="email"], div input[type="tel"], div input[type="password"] {
+    margin-bottom: -15px;
+}
+
 }
 
 @media (width < 650px) {
@@ -403,9 +426,15 @@ presenter-container img {
     width: calc(var(--seal-prof-img) / 0.75);
 }
 
-/* input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
-    width: 24ch;
-}  */
+fieldset {
+    font-size: calc(var(--f-size) / 3.3);
+    padding: 0;
+}
+
+div input[type="text"], div input[type="email"], div input[type="tel"], div input[type="password"] {
+    margin-bottom: 5px;
+}
+
 
 .radio-checkbox-all {
     display: flex;
@@ -435,8 +464,8 @@ lecture-container  {
 }
 
 fieldset {
-    font-size: calc(var(--f-size) / 4);
-    padding: 2px 0 5px 0;
+    font-size: calc(var(--f-size) / 4.2);
+    padding: 0;
 }
 
 }

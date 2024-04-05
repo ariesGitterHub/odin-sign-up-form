@@ -27,8 +27,8 @@
                         "Beyond the Starry Veil: Insights into Lost Antiquarian Philosophies"
                     </lecture-container>
                     <details-container>
-                        <div class="pop-up">CLICK FOR LECTURE DESCRIPTION.
-                        <span class="pop-up-text" id="my-pop-up">This lecture will shed light on recently discovered documentary evidence of hitherto unknown scientific methods and philosophies that had a profound impact on human history and the development of many current technologies.</span>
+                        <div class="ld-click">CLICK FOR LECTURE DESCRIPTION.
+                        <span class="ld-pop-up-text" id="ld-pop-up">This lecture will shed light on recently discovered documentary evidence of hitherto unknown scientific methods and philosophies that had a profound impact on human history and the development of many current technologies.</span>
                         </div>
                         <ul>
                         <li>Admission to this lecture is FREE ($0.00)</li>
@@ -45,50 +45,52 @@
                     <hr>
                     <h2>Registration Required</h2>
                     <p>* Indicates Required Fields</p>
-                    <form action="">
-                        <fieldset>
+                    <p>&dagger; For automated calls/texts in the event of a cancellation or postponement.</p>
+                    <form action="" method="">
+                        <faux-fieldset>
                             <div>
                                 <label for="fname">*First Name</label>
-                                <input type="text" id="fname" name="user-fname" required>    
+                                <input type="text" id="fname" name="user-fname" minlength="1" maxlength="22" >    
                             </div>
                             <div>
                                 <label for="lname">*Last Name</label>
-                                <input type="text" id="lname" name="user-lname" required>
+                                <input type="text" id="lname" name="user-lname" minlength="1" maxlength="22" />
                             </div>
-                        </fieldset>        
+                        </faux-fieldset>        
                         <br>
-                        <fieldset>
+                        <faux-fieldset>
                             <div>
                                 <label for="email">*Email</label>
-                                <input type="email" id="email" name="user-email" required>
+                                <input type="email" id="email" name="user-email" />
                             </div>
                             <div>
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="user-phone"  />
+                                <label for="phone">*&dagger;Phone Number (US only)</label>
+                                <input type="tel" id="phone" name="user-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" />
                             </div>
-                        </fieldset>
+                        </faux-fieldset>
                         <br>
-                        <fieldset>
+                        <faux-fieldset>
                             <div>
-                                <label for="password-confirm">*Create Password</label>
-                                <input id="password-confirm" name="user-password-confirm" type="password" required>
+                                <label for="create-password">*Create Password</label>
+                                <input id="create-password" name="user-password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required />
                             </div>
                             <div>
-                                <label for="password">*Confirm Password</label>
-                                <input id="password" name="user-password" type="password" required>
+                                <label for="confirm-password">*Confirm Password</label>
+                                <input id="confirm-password" type="password" required />
                             </div>
-                        </fieldset>
-                        <p>Note: passwords must have a minimum length of 12 and contain at least one uppercase letter (A-Z), one lowercase (a-z), one symbol (e.g., !,@,#,$, etc.), and one number (0-9).</p> 
+                        </faux-fieldset>
+                        <span id="wp-pop-up-text"></span>
+                        <p>Passwords require a minimum length of 8 characters and must contain at least one uppercase letter, one lowercase, one symbol (e.g., !,@,#,$, etc.), and one number.</p> 
                         <br>
                         <fieldset class="fieldset-border">
                             <legend>*Choose a Lecture Format</legend>
                             <div class="radio-checkbox-all">
                                 <div>
-                                    <input type="radio" id="in-person" name="user-format" value="in-person" required/>
+                                    <input type="radio" id="in-person" name="user-format" value="in-person" />
                                     <label for="in-person">In-Person Attendance</label>  
                                 </div>
                                 <div>    
-                                    <input type="radio" id="online" name="user-format" value="online" required/>
+                                    <input type="radio" id="online" name="user-format" value="online" />
                                     <label for="online">Online: Via MU-Livestream</label>
                                 </div>
 

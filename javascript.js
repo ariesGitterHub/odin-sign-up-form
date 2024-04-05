@@ -5,13 +5,29 @@
 //   popup.classList.toggle("show");
 // }
 
-const popUp = document.querySelector(".pop-up");
+const ldPopUp = document.querySelector(".ld-click");
 
 // Note, I was getting the error: Cannot read properties of null (reading 'addEventListener'). Adding "defer" to the html head here: "<script src="javascript.js" defer></script>" fixed this null issue. KEEP THIS COMMENT FOR FUTURE REFERENCE.
 
-popUp.addEventListener("click", myPopUpFunc);
-const popUpSpan = document.querySelector("#my-pop-up");
+ldPopUp.addEventListener("click", ldPopUpFunc);
+const ldPopUpSpan = document.querySelector("#ld-pop-up");
 
-function myPopUpFunc() {
-  popUpSpan.classList.toggle("pop-up-show");
+function ldPopUpFunc() {
+  ldPopUpSpan.classList.toggle("pop-up-show");
 }
+
+
+// const wpPopUpSpan = document.querySelector("#wp-pop-up-text");
+// wpPopUpSpan.addEventListener("onchange", wpPopUpFunc);
+
+// function wpPopUpFunc() {
+//   const password = document.querySelector("#create-password").value;
+//   const confirmPassword = document.querySelector("#confirm-password").value;
+
+//   if (password !== confirmPassword) {
+//     wpPopUpSpan.classList.toggle("pop-up-show");
+//   }
+
+// }
+
+
