@@ -44,58 +44,58 @@
                 <form-container>
                     <hr>
                     <h2>Registration Required</h2>
+                    <p><em>Already have a MU Lecture Series Account? <a href="">If yes, log in!</a></em></p>  
                     <p>* Indicates Required Fields</p>
                     <p>&dagger; For automated calls/texts in the event of a cancellation or postponement.</p>
                     <form action="" method="">
                         <faux-fieldset>
                             <div>
                                 <label for="fname">*First Name</label>
-                                <input type="text" id="fname" name="user-fname" minlength="1" maxlength="22" >    
+                                <input type="text" id="fname" name="user-fname" minlength="1" maxlength="22" required>    
                             </div>
                             <div>
                                 <label for="lname">*Last Name</label>
-                                <input type="text" id="lname" name="user-lname" minlength="1" maxlength="22" />
+                                <input type="text" id="lname" name="user-lname" minlength="1" maxlength="22" required/>
                             </div>
                         </faux-fieldset>        
                         <br>
                         <faux-fieldset>
                             <div>
                                 <label for="email">*Email</label>
-                                <input type="email" id="email" name="user-email" />
+                                <input type="email" id="email" name="user-email" required/>
                             </div>
                             <div>
-                                <label for="phone">*&dagger;Phone Number (US only)</label>
-                                <input type="tel" id="phone" name="user-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" />
+                                <label for="phone">&dagger;Phone Number (US only)</label>
+                                <input type="tel" id="phone" name="user-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}"/>
                             </div>
                         </faux-fieldset>
                         <br>
                         <faux-fieldset>
                             <div>
                                 <label for="create-password">*Create Password</label>
-                                <input id="create-password" name="user-password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required />
+                                <input id="create-password" name="user-password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+                                <p><input id="show-password" type="checkbox"/> Show Both Passwords</p>
                             </div>
                             <div>
                                 <label for="confirm-password">*Confirm Password</label>
-                                <input id="confirm-password" type="password" required />
+                                <input id="confirm-password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+                                <p><span id="wrong-password"></span></p>
                             </div>
-                        </faux-fieldset>
-                        <span id="wp-pop-up-text"></span>
-                        <p>Passwords require a minimum length of 8 characters and must contain at least one uppercase letter, one lowercase, one symbol (e.g., !,@,#,$, etc.), and one number.</p> 
+                        </faux-fieldset>                        
+                        <p>Passwords require a minimum length of 8 characters and must include an uppercase letter, a lowercase letter, a symbol (e.g., !,@,#,$, etc.), and one number.</p> 
                         <br>
                         <fieldset class="fieldset-border">
                             <legend>*Choose a Lecture Format</legend>
                             <div class="radio-checkbox-all">
                                 <div>
-                                    <input type="radio" id="in-person" name="user-format" value="in-person" />
+                                    <input type="radio" id="in-person" name="user-format" value="in-person" required />
                                     <label for="in-person">In-Person Attendance</label>  
                                 </div>
                                 <div>    
-                                    <input type="radio" id="online" name="user-format" value="online" />
+                                    <input type="radio" id="online" name="user-format" value="online" required/>
                                     <label for="online">Online: Via MU-Livestream</label>
                                 </div>
-
                             </div>
-
                         </fieldset>
                         <br>
                         <fieldset class="fieldset-border">
@@ -114,11 +114,11 @@
                             <div class="radio-checkbox-pair">
                             <div>
                                 <input type="checkbox" id="hwmf" name="subscribe-hwmf" value="hwmf" />
-                                <label for="hwmf">Herbert West Memorial Fund</label> <br/>    
+                                <label for="hwmf">Herbert West MSF Annual</label> <br/>    
                             </div>
                             <div>
-                                <input type="checkbox" id="rocassa-review" name="subscribe-rocassa-review" value="rocassa-review" />
-                                <label for="rocassa-review">The Rocassa Review</label>    
+                                <input type="checkbox" id="rocassa-review" name="subscribe-roccasa-review" value="rocassa-review" />
+                                <label for="rocassa-review">The Roccasa Review</label>    
                             </div>
                             </div>
                             </div>
@@ -129,7 +129,7 @@
                     </form>
                 </form-container>
                 <div>
-                    <p>Already have a MU Lecture Series Account? <a href="">Log in.</a> </p>  
+                    <br>
                     <hr>
                     <p class="madMuffinMan">Mad Muffin Man Design Studio, ©opyright 2024</p>   
                 </div>

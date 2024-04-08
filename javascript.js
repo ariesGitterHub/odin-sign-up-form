@@ -17,17 +17,40 @@ function ldPopUpFunc() {
 }
 
 
-// const wpPopUpSpan = document.querySelector("#wp-pop-up-text");
-// wpPopUpSpan.addEventListener("onchange", wpPopUpFunc);
+// Show password
 
-// function wpPopUpFunc() {
-//   const password = document.querySelector("#create-password").value;
-//   const confirmPassword = document.querySelector("#confirm-password").value;
+const password = document.querySelector("#create-password");
+const confirmPassword = document.querySelector("#confirm-password"); 
 
-//   if (password !== confirmPassword) {
-//     wpPopUpSpan.classList.toggle("pop-up-show");
-//   }
 
-// }
+document.querySelector("#show-password").addEventListener("click", showPassword);
+
+function showPassword() {
+  if (password.type === "password" && confirmPassword.type === "password") {
+    password.type = "text";
+    confirmPassword.type = "text"
+  } else {
+    password.type = "password";
+    confirmPassword.type = "password";
+  }
+}
+
+//  Wrong password
+
+password.addEventListener("blur", passwordChecker);
+confirmPassword.addEventListener("blur", passwordChecker);
+
+function passwordChecker() {
+  const passwordCheckedText = document
+  .querySelector("#wrong-password"); 
+
+  if (password.value !== confirmPassword.value) {
+  passwordCheckedText.innerText = "Passwords do not match!";
+  } else if (password.value === confirmPassword.value) {
+   passwordCheckedText.innerText = "Both passwords match.";
+  } else if (password.value === "" && confirmPassword.value === "") {
+  passwordCheckedText.innerText = "";
+  }
+}
 
 
