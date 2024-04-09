@@ -36,16 +36,20 @@ confirmPassword.addEventListener("blur", checkPasswordCreateMsg);
 
 function checkPasswordCreateMsg() {
   const passwordCheckedMsg = document.querySelector("#password-check-msg"); 
-
-  if (password.value === confirmPassword.value) {
-    passwordCheckedMsg.innerText = "Both passwords match.";
-    confirmPassword.style.cssText = "border: 2px solid var(--my-white)";
-  }
-  else if (password.value !== confirmPassword.value) {
+  
+  if (password.value === confirmPassword.value && confirmPassword.value === "") {
     passwordCheckedMsg.innerText = "Passwords do not match!";
     confirmPassword.style.cssText = "border: 5px double var(--my-red)";
-     } 
-  else if (password.value === "" || confirmPassword.value === "") {
+  } else if (password.value === confirmPassword.value) {
+    passwordCheckedMsg.innerText = "Both passwords match.";
+    confirmPassword.style.cssText = "border: 2px solid var(--my-white)";
+  } else if (password.value === confirmPassword.value && confirmPassword.value === "") {
+    passwordCheckedMsg.innerText = "Passwords do not match!";
+    confirmPassword.style.cssText = "border: 5px double var(--my-red)";
+  } else if (password.value !== confirmPassword.value) {
+    passwordCheckedMsg.innerText = "Passwords do not match!";
+    confirmPassword.style.cssText = "border: 5px double var(--my-red)";
+  } else if (password.value === "" || confirmPassword.value === "") {
     passwordCheckedText.innerText = "";
     confirmPassword.style.cssText = "border: 5px double var(--my-red)";
   }
