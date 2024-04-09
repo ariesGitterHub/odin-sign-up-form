@@ -11,24 +11,24 @@
         <header>
             <img src="Miskatonic Colored Logo.png" alt="The college seal of fictional Miskatonic University.">
             <h1>Miskatonic University</h1>
-            <img src="Miskatonic Colored Logo.png" alt="The college seal of fictional Miskatonic University.">
+            <img src="Miskatonic Colored Logo.png" alt="Another, identical college seal of fictional Miskatonic University.">
         </header>
         <pic-text-form-container>
             <pic-container>
-            <img src="matt-benson-1.png" alt="Rays of light pour into a dark Egyptian tomb from above.">
+            <img src="matt-benson-1.png" alt="Rays of light pour into a dark, sand-floored Egyptian tomb from above.">
             </pic-container>
             <text-and-form-container>
                 <text-container>
-                    <h2 class="large">2024 MU Lecture Event</h2>
+                    <h2>2024 MU Lecture Event</h2>
                     <hr>
-                    <p>Miskatonic University, together with the <em>Roccasa Institute</em>, and a generous endowment from the  <em>Herbert West Memorial Science Fund</em>, is proud to present:</p>
+                    <p>Miskatonic University, together with the <em>Roccasa Institute</em>, and a generous endowment from the <em>Herbert West Memorial Science Fund</em>, is delighted to present:</p>
                     <lecture-container>
                         <img src="matt-benson-1.png" alt="Rays of light pour into a dark Egyptian tomb from above.">
                         "Beyond the Starry Veil: Insights into Lost Antiquarian Philosophies"
                     </lecture-container>
                     <details-container>
                         <div class="ld-click">CLICK FOR LECTURE DESCRIPTION.
-                        <span class="ld-pop-up-text" id="ld-pop-up">This lecture will shed light on recently discovered documentary evidence of hitherto unknown scientific methods and philosophies that had a profound impact on human history and the development of many current technologies.</span>
+                        <span class="ld-pop-up-text" id="ld-pop-up">This lecture will shed light on recently unearthed documentary evidence of hitherto unknown scientific methods and philosophies that had a profound impact on human history and the development of many current technologies.</span>
                         </div>
                         <ul>
                         <li>Admission to this lecture is FREE ($0.00)</li>
@@ -37,8 +37,8 @@
                         </ul>
                     </details-container>
                     <presenter-container>
-                        <img src="ravi-patel.jpg" alt="SSSSSSS">
-                        <p>Presented by Miskatonic University's own, Professor of History, Archaeology, and Ancient Languages, <strong><a href="https://www.gutenberg.org/files/8492/8492-h/8492-h.htm">Dr. Amber King, PhD</a></strong>.</p>               
+                        <img src="ravi-patel.jpg" alt="A picture of an older, smiling woman, the accomplished, albeit fictional, Dr. Amber King.">
+                        <p>Presented by Miskatonic University's famously intrepid explorer, <strong><a href="https://www.gutenberg.org/files/8492/8492-h/8492-h.htm">Dr. Amber King, PhD</a></strong>, Professor of History, Archaeology, and Ancient Languages.</p>               
                     </presenter-container>
                 </text-container>
                 <form-container>
@@ -66,23 +66,28 @@
                             </div>
                             <div>
                                 <label for="phone">&dagger;Phone Number (US only)</label>
-                                <input type="tel" id="phone" name="user-phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}"/>
+                                <input type="tel" id="phone" name="user-phone" placeholder="555-555-5555" pattern="\d{3}[\-]\d{3}[\-]\d{4}"/>
                             </div>
                         </faux-fieldset>
                         <br>
                         <faux-fieldset>
                             <div>
                                 <label for="create-password">*Create Password</label>
-                                <input id="create-password" name="user-password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
+                                <input 
+                                id="create-password" 
+                                name="user-password" 
+                                type="password" 
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" 
+                                required/>
                                 <p><input id="show-password" type="checkbox"/> Show Both Passwords</p>
                             </div>
                             <div>
                                 <label for="confirm-password">*Confirm Password</label>
-                                <input id="confirm-password" type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required/>
-                                <p><span id="wrong-password"></span></p>
+                                <input id="confirm-password" type="password" required/>
+                                <p><span id="password-check-msg"></span></p>
                             </div>
                         </faux-fieldset>                        
-                        <p>Passwords require a minimum length of 8 characters and must include an uppercase letter, a lowercase letter, a symbol (e.g., !,@,#,$, etc.), and one number.</p> 
+                        <p>Passwords require a minimum length of 8 characters and must include an uppercase letter, a lowercase letter, a symbol (e.g., !,@,#,$, etc.), and a number.</p> 
                         <br>
                         <fieldset class="fieldset-border">
                             <legend>*Choose a Lecture Format</legend>
@@ -93,10 +98,11 @@
                                 </div>
                                 <div>    
                                     <input type="radio" id="online" name="user-format" value="online" required/>
-                                    <label for="online">Online: Via MU-Livestream</label>
+                                    <label for="online">Online: Via MU-LiveStream</label>
                                 </div>
                             </div>
                         </fieldset>
+                        <p>All MU lectures will be made available at a later date via the <a href="">MU-LecturePortal</a>.</p> 
                         <br>
                         <fieldset class="fieldset-border">
                             <legend>Subscribe for Email News</legend>
@@ -124,7 +130,7 @@
                             </div>
                         </fieldset>
                         <div>
-                            <button type="submit">Submit</button>
+                            <button type="submit" id="submit-button">Submit</button>
                         </div>
                     </form>
                 </form-container>
