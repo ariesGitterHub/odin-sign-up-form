@@ -30,11 +30,6 @@
 
 --seal-prof-img: 12rem;
 
-/* --f-size-sm: 1rem;
---f-size-md: 1.25rem;
---f-size-lg: 1.5rem;
---f-size-title: 2.5rem; */
-
 --f-size: 4rem;
 }
 
@@ -165,7 +160,7 @@ presenter-container img {
     padding-right: 10px;
 }
 
-form-container p, form-container a, form-container #wp-pop-up-text {
+form-container p, form-container a, form-container {
     color: var(--my-orange);
     font-size: calc(var(--f-size) / 3.5);
 }
@@ -176,18 +171,7 @@ form-container p, form-container a, form-container #wp-pop-up-text {
 
 /* 3. Form Specific Elements             */
 
-faux-fieldset {
-    border: none;
-    border-radius: 10px;
-    display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: start;
-        justify-content: space-evenly;
-    font-size: calc(var(--f-size) / 3);
-}
-
-fieldset {
+faux-fieldset, fieldset {
     border: none;
     border-radius: 10px;
     display: flex;
@@ -221,6 +205,17 @@ input[type="radio"], input[type="checkbox"] {
     margin-left: 1rem;
 }
 
+.radio-checkbox-all {
+    display: flex;
+        flex-direction: row;
+    padding-left: 5px;
+}
+
+.radio-checkbox-pairs {
+    display: flex;
+        flex-direction: column;
+}
+
 input:invalid {
     border: 5px double var(--my-red);
 }
@@ -247,17 +242,6 @@ button {
     margin-top: 20px;
 }
 
-.radio-checkbox-all {
-    display: flex;
-        flex-direction: row;
-    padding-left: 5px;
-}
-
-.radio-checkbox-pairs {
-    display: flex;
-        flex-direction: column;
-}
-
 button:hover {
     background: var(--my-orange);
     color: var(--my-black);
@@ -276,7 +260,8 @@ button:active {
 }
 
 /* Popup */
-.ld-click, #wp-pop-up-text {
+
+.ld-click {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -284,7 +269,7 @@ button:active {
     font-size: calc(var(--f-size) / 4);
 }
 
-/* The actual popup (appears on top) */
+/* Actual popup (appears on top) */
 .ld-click .ld-pop-up-text {
   visibility: hidden;
   width: 320px;
@@ -301,7 +286,7 @@ button:active {
   font-size: calc(var(--f-size) / 3.5);
 }
 
-/* Tint little popup arrow */
+/* Tiny popup arrow */
 .ld-click .ld-pop-up-text::after {
   content: "";
   position: absolute;
@@ -320,7 +305,7 @@ button:active {
   animation: fadeIn 1s;
 }
 
-/* Add animation (fade in the popup) */
+/* Add animation (fades in the popup) */
 @-webkit-keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -331,9 +316,6 @@ button:active {
   to {opacity:1 ;}
 }
 
-#wp-pop-up-text {
-    color: var(--my-white)
-}
 
 @media (width >= 865px) {
     
@@ -347,6 +329,7 @@ div input[type="text"], div input[type="email"], div input[type="tel"], div inpu
 }
 
 }
+
 
 @media (width < 865px) {
 
@@ -413,6 +396,7 @@ fieldset {
 
 }
 
+
 @media (width < 650px) {
 
 a, p, ul {
@@ -449,7 +433,6 @@ div input[type="text"], div input[type="email"], div input[type="tel"], div inpu
     margin-bottom: 3px;
 }
 
-
 .radio-checkbox-all {
     display: flex;
     flex-direction: column;
@@ -458,6 +441,7 @@ div input[type="text"], div input[type="email"], div input[type="tel"], div inpu
 }
 
 }
+
 
 @media (width < 376px) {
 

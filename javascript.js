@@ -1,10 +1,6 @@
+// Pop up of lecture description
+
 // When the user clicks on <div>, open the popup
-
-// function myFunction() {
-//   const popup = document.getElementById("myPopup");
-//   popup.classList.toggle("show");
-// }
-
 const ldPopUp = document.querySelector(".ld-click");
 
 // Note, I was getting the error: Cannot read properties of null (reading 'addEventListener'). Adding "defer" to the html head here: "<script src="javascript.js" defer></script>" fixed this null issue. KEEP THIS COMMENT FOR FUTURE REFERENCE.
@@ -16,12 +12,10 @@ function ldPopUpFunc() {
   ldPopUpSpan.classList.toggle("pop-up-show");
 }
 
-
 // Show password
 
 const password = document.querySelector("#create-password");
 const confirmPassword = document.querySelector("#confirm-password"); 
-
 
 document.querySelector("#show-password").addEventListener("click", showPassword);
 
@@ -35,7 +29,7 @@ function showPassword() {
   }
 }
 
-//  Wrong password 
+//  Password match checker
 
 password.addEventListener("blur", checkPasswordCreateMsg);
 confirmPassword.addEventListener("blur", checkPasswordCreateMsg);
